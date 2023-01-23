@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For In - Javascript</title>
+    <script src="forIn.js"></script>
+</head>
+
+<body>
+    <script>
+        // membuat sebuah variabel yang didalamnya terdapat sebuah value yang disimpan kedalam objek
+        const person = {
+            firstName: "Ava",
+            middleName: "Adele",
+            lastName: "Anastasia"
+        }
+
+        // menyimpan variabel kedalam orang 
+        for (const orang in person) {
+            document.writeln(
+                `
+                <p>
+                    ${orang} : ${person[orang]}
+                </p>
+            `
+            );
+        }
+
+        // membuat variabel laugth yang disimpan kedalam objek
+        let laugth = {
+            indonesia: "kwkwkwk",
+            english: "hahahah",
+            brazil: "kkkkkkk",
+        }
+        // membuat sebuah variabel ketawa
+        let ketawa;
+
+        // melakukan perulangan dimana laugth disimpan kedalam ketawa
+        for (ketawa in laugth) {
+            // menampilkan output
+            document.writeln(
+                `
+                <p>
+                    <br><br> ${ketawa} : ${laugth[ketawa]}
+                </p>
+                <br>
+                <br>
+                `
+            );
+        }
+
+        //buat object objek1 yang disimpan kedalam objek
+        let objek1 = {
+            a: "Belajar JavaScript", // string
+            b: 12, // integer / number
+            c: true, // booelan
+            d: "duniailkom", // string
+            e: [1, 2, 3, 4], // objek
+            f: {
+                i: "test" // objek
+            },
+            g: function () {} // function
+        };
+        // membuat sebuah variabel a
+        let a;
+
+        // melakukan perulangan dimana a objek1 disimpan kedalam a
+        for (a in objek1) {
+            // menampilkan output
+            document.writeln(
+                `
+                <p>Tipe Data : ` + (typeof (objek1[a])) + `</p>
+                `
+            );
+        };
+    </script>
+</body>
+
+</html>
